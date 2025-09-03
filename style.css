@@ -8,16 +8,26 @@ body {
 }
 
 .main {
-  width: 100%;
   background-color: #360000;
   color: white;
-  text-align: center;
-  font-size: 14px;
+  font-size: 0.85rem;
+}
+
+.main p {
+  z-index: 2;
+}
+
+.icon-set {
+  font-size: 1rem;
+  z-index: 2;
+}
+
+i {
+  transition: 0.4s;
 }
 
 i:hover {
   transform: rotatey(180deg);
-  transition: 0.4s;
 }
 
 .nav-btn {
@@ -28,72 +38,69 @@ i:hover {
   border: 1px solid #b90000;
   color: #b90000;
   background-color: transparent;
+  transition: ease-in 0.3s;
 }
 
 .btn1:hover {
-  /* border:  none; */
   color: white;
-  transition: ease-in 0.3s;
   background-color: #b90000;
 }
 
-.nav-link:hover {
-  border: none;
-  border-bottom: 2px solid #b90000;
-  color: white;
-}
-
 .nav-link {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
-.bg-img-sec-1 {
-  position: relative;
-  height: 85vh;
-  background-image: url(img/Section-1.jpg);
-  background-position: top;
-  background-repeat: no-repeat;
+.main-banner {
+  background-image: url(Img/Section-1.jpg);
+  width: 100%;
+  height: 600px;
   background-size: cover;
-  overflow: hidden;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.bg-img-sec-1::before {
+.main-banner::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 730px;
   background: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.9),
     rgba(170, 1, 1, 0.2),
-    rgba(0, 0, 0, 0.9),
-    rgba(112, 82, 82, 0)
+    rgba(0, 0, 0, 0.4)
   );
   z-index: 1;
 }
 
-.sec-1-content {
-  position: relative;
+.banner-text {
+  font-family: "Roboto serif,Serif";
+  width: 80rem;
   z-index: 2;
 }
 
-.sec-1-content h1 {
-  font-size: 70px;
-  font-family: "Roboto Serif", serif;
-  font-weight: 300;
+.banner-text h1 {
+  font-size: 80px;
 }
 
-.sec-1-content p {
-  font-size: 21px;
-  font-family: "Roboto serif";
-  font-weight: 200;
+.banner-text h5 {
+  font-size: 20px;
 }
 
-.sec-1-btn {
-  border: none;
-  background-color: #b40000;
+.section-3-txt > p {
+  line-height: 2;
+  font-family: "Roboto serif,Serif";
+}
+
+.section-3-txt > h1 {
+  line-height: 1.5;
+}
+
+.section-3-txt > h5 {
+  line-height: 1.5;
 }
 
 .about-content .content h1 p span {
@@ -118,16 +125,56 @@ i:hover {
   background-color: #b40000;
 }
 
-.Content h5 {
+.content h5 {
   color: #b40000;
 }
 
-.Content h4 {
+.content h4 {
   color: #360000;
 }
 
-.Content p {
+.content p {
   font-weight: 100;
   color: gray;
 }
 
+.banner-sec-6 {
+  background-image: url(Img/Section_5.jpg);
+  width: 100%;
+  height: 450px;
+  background-position: left;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.carousel-item h1 {
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+  #carouselExampleAutoplaying {
+    width: 100% !important;
+  }
+}
+
+.card {
+  border: none;
+}
+
+.ft-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 200ms ease-in-out;
+}
+
+.ft-links a:hover {
+  color: #dd6f00;
+}
+
+.ft-btn {
+  color: #b40000;
+  background-color: white;
+  border-radius: 0px;
+}
